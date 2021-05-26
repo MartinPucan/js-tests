@@ -1,33 +1,19 @@
-// const {sum, subtract} = require('../src/js/math')
-
-const sum = (a, b) => a - b
-const subtract = (a, b) => a - b
+import { test, expect } from './functions/index'
+const {sum, subtract} = require('../src/js/math')
+// const {divide, multiplication} = require('../src/js/math')
 
 let result, expected
 
 result = sum(3, 7)
 expected = 10
-expect(result).toBe(expected)
+// expect(result).toBe(expected)
 
 result = subtract(7, 3)
 expected = 4
-expect(result).toBe(expected)
+// expect(result).toBe(expected)
 
-function test(title, callback) {
-    try {
-        callback()
-    } catch (error) {
-        console.error(error)
-    }
-}
-
-function expect(actual) {
-    return {
-        toBe(expected) {
-            if (actual !== expected) {
-                console.error(`${actual} is not equal to ${expected}`)
-                throw new Error(`${actual} is not equal to ${expected}`)
-            }
-        },
-    }
-}
+test('test substract', () => {
+    const result = subtract(18, 10)
+    const expected = 8
+    expect(result).toBe(expected)
+})
