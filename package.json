@@ -12,5 +12,6 @@
   "description": "js testing",
   "main": "main.js",
   "author": "MartinPucan",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }
